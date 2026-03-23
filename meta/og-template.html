@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  spoonLabs AI — OG Image Template
+  ================================
+  Generates 1200x630 Open Graph / social preview images.
+
+  Usage (with a headless browser tool like Puppeteer, Playwright, or satori):
+    1. Replace the [VARIABLES] below with site-specific values.
+    2. Render this HTML at exactly 1200×630px viewport.
+    3. Screenshot and save as og-image.png (or .jpg at 85% quality).
+
+  Variables to replace:
+    [SITE_NAME]       — e.g. "spoonLabs Cards"
+    [TAGLINE]         — e.g. "Trade. Collect. Play."
+    [DOMAIN]          — e.g. "spoonlabs.cards"
+    [ACCENT_COLOR]    — optional override hex, e.g. "#1D9E75"
+
+  The template uses Google Fonts CDN for Space Mono + DM Sans.
+  For production offline rendering, embed the font-face base64 instead.
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1200, height=630">
+  <title>OG Image — [SITE_NAME]</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --color-bg:      #0D0C0F;
+      --color-surface: #161519;
+      --color-primary: #534AB7;
+      --color-accent:  #1D9E75;
+      --color-text:    #F8F7F5;
+      --color-muted:   #5F5E5A;
+      --color-border:  rgba(255,255,255,0.08);
+      --font-mono:     'Space Mono', monospace;
+      --font-body:     'DM Sans', sans-serif;
+
+      /* Site-specific accent — override at render time if desired */
+      --site-accent:   [ACCENT_COLOR];
+    }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: var(--color-bg);
+    }
+
+    .og-root {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      background: var(--color-bg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 56px 64px 52px;
+      overflow: hidden;
+    }
+
+    /* ── Background noise / texture layer ── */
+    .og-root::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(ellipse 700px 400px at 80% 0%, rgba(83,74,183,0.18) 0%, transparent 70%),
+        radial-gradient(ellipse 400px 300px at 10% 90%, rgba(29,158,117,0.12) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Grid lines (subtle) ── */
+    .og-root::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      background-size: 60px 60px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .og-content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
+
+    /* ── Top row: brand mark ── */
+    .og-brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .og-brand-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 9px;
+      background: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .og-brand-icon svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    .og-brand-name {
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-text);
+      letter-spacing: -0.5px;
+    }
+
+    .og-brand-name span {
+      color: var(--color-accent);
+      font-weight: 400;
+    }
+
+    /* ── Center: site name + tagline ── */
+    .og-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      padding: 32px 0;
+    }
+
+    .og-site-name {
+      font-family: var(--font-mono);
+      font-size: 72px;
+      font-weight: 700;
+      color: var(--color-text);
+      line-height: 1.05;
+      letter-spacing: -2px;
+      max-width: 900px;
+    }
+
+    .og-site-name .og-accent {
+      color: var(--color-primary);
+    }
+
+    .og-tagline {
+      font-family: var(--font-body);
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--color-muted);
+      line-height: 1.4;
+      max-width: 700px;
+    }
+
+    /* ── Bottom row: domain pill + ecosystem note ── */
+    .og-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .og-domain {
+      font-family: var(--font-mono);
+      font-size: 16px;
+      font-weight: 400;
+      color: var(--color-accent);
+      letter-spacing: 0.5px;
+      background: rgba(29,158,117,0.1);
+      border: 1px solid rgba(29,158,117,0.25);
+      padding: 8px 16px;
+      border-radius: 6px;
+    }
+
+    .og-ecosystem {
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: rgba(248,247,245,0.35);
+      letter-spacing: 0.3px;
+    }
+
+    /* ── Right-side decorative accent bar ── */
+    .og-accent-bar {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        var(--color-primary) 0%,
+        var(--color-accent) 100%
+      );
+      opacity: 0.7;
+      z-index: 2;
+    }
+
+    /* ── Bottom accent line ── */
+    .og-accent-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        var(--color-accent) 0%,
+        var(--color-primary) 40%,
+        transparent 100%
+      );
+      opacity: 0.6;
+      z-index: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="og-root">
+
+    <!-- Decorative elements -->
+    <div class="og-accent-bar"></div>
+    <div class="og-accent-line"></div>
+
+    <div class="og-content">
+
+      <!-- Top: Brand identity -->
+      <div class="og-brand">
+        <div class="og-brand-icon">
+          <!-- Inline icon SVG for self-contained rendering -->
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="16" cy="10" rx="7" ry="7.5" fill="#FFFFFF"/>
+            <ellipse cx="14.5" cy="8.5" rx="3" ry="3.2" fill="#1D9E75" opacity="0.65"/>
+            <rect x="14.5" y="16.5" width="3" height="11" rx="1.5" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <div class="og-brand-name">
+          spoonLabs <span>AI</span>
+        </div>
+      </div>
+
+      <!-- Center: Site-specific content -->
+      <div class="og-main">
+        <div class="og-site-name">
+          <!-- Replace [SITE_NAME] — can use .og-accent span for colored portion -->
+          [SITE_NAME]
+        </div>
+        <div class="og-tagline">
+          [TAGLINE]
+        </div>
+      </div>
+
+      <!-- Bottom: Domain + ecosystem context -->
+      <div class="og-footer">
+        <div class="og-domain">[DOMAIN]</div>
+        <div class="og-ecosystem">Part of the spoonLabs AI ecosystem</div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

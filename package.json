@@ -1,0 +1,24 @@
+{
+  "name": "@spoonlabs/brand",
+  "version": "0.1.0",
+  "description": "Shared brand system for spoonLabs AI ecosystem",
+  "main": "colors.css",
+  "files": [
+    "colors.css",
+    "tokens.json",
+    "logos/",
+    "meta/"
+  ],
+  "keywords": [
+    "spoonlabs",
+    "brand",
+    "design-tokens"
+  ],
+  "author": "spoonLabs AI",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spoonlabs/brand"
+  },
+  "homepage": "https://spoonlabs.ai"
+}

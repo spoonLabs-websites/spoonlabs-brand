@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none" role="img" aria-label="spoonLabs AI icon">
+  <title>spoonLabs AI</title>
+  <desc>spoonLabs AI — stylized spoon icon mark</desc>
+
+  <!--
+    spoonLabs AI — Standalone Icon / Favicon Source
+    32x32 viewBox — designed to be legible at 16px, 32px, 64px
+    Primary: #534AB7 (deep purple)
+    Accent:  #1D9E75 (teal)
+
+    Shape: Abstract geometric spoon — oval bowl at top,
+    clean rectangular handle tapers to a rounded end.
+    The bowl carries a subtle teal highlight to reference the accent.
+  -->
+
+  <!-- Background fill — dark pill container for favicon contexts -->
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#0D0C0F"/>
+
+  <!-- Spoon bowl — filled ellipse, purple -->
+  <ellipse cx="16" cy="10" rx="7" ry="7.5" fill="#534AB7"/>
+
+  <!-- Bowl inner highlight — teal crescent suggesting light/depth -->
+  <ellipse cx="14.5" cy="8.5" rx="3" ry="3.2" fill="#1D9E75" opacity="0.55"/>
+
+  <!-- Handle — tapered rectangle descending from bowl -->
+  <rect x="14.5" y="16.5" width="3" height="11" rx="1.5" fill="#534AB7"/>
+
+  <!-- Handle tip rounded cap -->
+  <ellipse cx="16" cy="28" rx="1.5" ry="1.5" fill="#534AB7"/>
+
+  <!-- Subtle purple glow behind bowl for dark bg legibility -->
+  <ellipse cx="16" cy="10" rx="7" ry="7.5" fill="url(#bowlGlow)" opacity="0.25"/>
+
+  <defs>
+    <radialGradient id="bowlGlow" cx="50%" cy="40%" r="60%" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="#7A6FF0"/>
+      <stop offset="100%" stop-color="#534AB7" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

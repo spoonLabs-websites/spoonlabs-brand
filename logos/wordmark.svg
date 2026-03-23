@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 56" fill="none" role="img" aria-label="spoonLabs AI">
+  <title>spoonLabs AI</title>
+  <desc>spoonLabs AI wordmark — horizontal lockup</desc>
+
+  <!--
+    spoonLabs AI Wordmark
+    Designed for use on dark backgrounds (default: white/light text).
+    For light backgrounds, use fill="#0D0C0F" on the text elements.
+
+    Variants:
+      Default:   white text (dark bg)
+      .light:    swap fills below to dark (#0D0C0F / #534AB7)
+  -->
+
+  <!-- "spoon" — primary weight, white -->
+  <text
+    x="0"
+    y="40"
+    font-family="'Space Mono', 'JetBrains Mono', monospace"
+    font-size="36"
+    font-weight="700"
+    letter-spacing="-1"
+    fill="#FFFFFF"
+  >spoon</text>
+
+  <!-- "Labs" — medium weight, slightly muted -->
+  <text
+    x="176"
+    y="40"
+    font-family="'Space Mono', 'JetBrains Mono', monospace"
+    font-size="36"
+    font-weight="400"
+    letter-spacing="-1"
+    fill="#FFFFFF"
+    opacity="0.92"
+  >Labs</text>
+
+  <!-- "AI" — small accent in teal, vertically offset for visual hierarchy -->
+  <text
+    x="279"
+    y="28"
+    font-family="'Space Mono', 'JetBrains Mono', monospace"
+    font-size="14"
+    font-weight="700"
+    letter-spacing="2"
+    fill="#1D9E75"
+  >AI</text>
+
+  <!-- Subtle underline accent: teal left, fades to transparent -->
+  <rect x="0" y="48" width="260" height="1.5" rx="1"
+    fill="url(#wordmarkUnderline)" opacity="0.4"/>
+
+  <defs>
+    <linearGradient id="wordmarkUnderline" x1="0" y1="0" x2="260" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#1D9E75" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#534AB7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#534AB7" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>

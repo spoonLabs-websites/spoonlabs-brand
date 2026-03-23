@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <!--
+    spoonLabs AI — SVG Favicon
+    Drop this in <head>:
+      <link rel="icon" type="image/svg+xml" href="/logos/favicon.svg">
+    Browsers that support SVG favicons (Chrome, Firefox, Safari 14+) will use this.
+    Fall back to a .ico or PNG for older browsers if needed.
+  -->
+  <rect x="0" y="0" width="32" height="32" rx="7" fill="#0D0C0F"/>
+  <ellipse cx="16" cy="10" rx="7" ry="7.5" fill="#534AB7"/>
+  <ellipse cx="14.5" cy="8.5" rx="3" ry="3.2" fill="#1D9E75" opacity="0.55"/>
+  <rect x="14.5" y="16.5" width="3" height="11" rx="1.5" fill="#534AB7"/>
+  <ellipse cx="16" cy="28" rx="1.5" ry="1.5" fill="#534AB7"/>
+</svg>

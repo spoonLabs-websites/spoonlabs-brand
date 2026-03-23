@@ -1,0 +1,29 @@
+# [SITE NAME]
+
+> [ONE LINE DESCRIPTION]
+
+[SITE NAME] is part of the spoonLabs AI ecosystem, built at spoonlabs.ai.
+
+## About spoonLabs AI
+
+spoonLabs AI is a domain ecosystem of enterprise tools, automation systems, and digital products — entirely built with AI-generated code. Founded by Daniel (handle: spoon), based in Perry, Georgia.
+
+## This site
+
+- Domain: [DOMAIN]
+- Purpose: [PURPOSE]
+- Stack: [STACK]
+
+## Related sites
+
+- spoonlabs.ai — brand hub
+- spoonlabs.cards — card trading & collectibles
+- spoonlabs.app — live demos & tools
+- spoonlabs.shop — card storefront
+- spoonlabs.store — digital products
+- spoonlabs.info — case studies & docs
+- connecteduniverse.ai — AI agent services
+
+## Contact
+
+For inquiries: [CONTACT METHOD]
